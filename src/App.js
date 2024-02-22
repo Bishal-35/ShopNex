@@ -15,6 +15,7 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import { useContext,useEffect } from 'react';
 import { ShopContext } from './Context/ShopContext';
+
 function App() {
   const {theme}=useContext(ShopContext);
   return (

@@ -4,6 +4,7 @@ import hand_icon from '../Assets/hand_icon.png'
 import arrow_icon from '../Assets/arrow.png'
 import hero_image from '../Assets/hero_image.png'
 import { ShopContext } from '../../Context/ShopContext'
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const {theme}=useContext(ShopContext)
@@ -20,8 +21,11 @@ const Hero = () => {
                     <p className={'ph_'+theme}>For Everyone</p>
                 </div>
                 <div className="hero-latest-btn">
-                    <div className={'div_'+theme}>Latest Collection</div>
-                    <img src={arrow_icon} alt="" />
+                    {/* <div className={'div_'+theme}>Latest Collection</div>
+                    <img src={arrow_icon} alt="" /> */}
+                    <Link to="/latestcollection" className="latest-collection-link">
+                <b>Latest Collection  <img src={arrow_icon} alt="arrow" /></b>
+                </Link>
                 </div>
             </div>
             <div className="hero-right">
